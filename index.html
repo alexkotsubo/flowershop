@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flower Shop</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header-top">
+					<div class="header-top-social">
+						<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="top-social-icon svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+						<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="top-social-icon svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+						<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="top-social-icon svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+					</div>
+
+					<div class="header-top-reg reg">
+						<span class="reg-text-login reg-text popup-btn op-login-popup">Login</span><span class="reg-text-line">|</span><span class="reg-text reg-text-register popup-btn op-reg-popup">Register</span>
+					</div>
+
+					<div id="login-popup" class="login-popup-container popup">
+						<div class="login-popup-body popup-body">
+							<div class="login-popup-close close-popup"></div>
+							<input type="text" class="menu-form-input login-popup-input" placeholder="Enter your name" required>
+							<input type="email" class="menu-form-input login-popup-input" placeholder="Enter your email address" required>
+							<button class="menu-form-btn login-popup-input" type="submit">Join Now</button>
+						</div>
+					</div>
+
+					<div id="reg-popup" class="reg-popup-container popup">
+						<div class="reg-popup-body popup-body">
+							<div class="reg-popup-close close-popup"></div>
+							<input type="text" class="menu-form-input reg-popup-input" placeholder="Enter your name" required>
+							<input type="email" class="menu-form-input reg-popup-input" placeholder="Enter your email address" required>
+							<button class="menu-form-btn reg-popup-input" type="submit">Join Now</button>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="header-center">
+					<a href="tel:1800000000" class="header-center-need need">
+						<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile-alt" class="need-icon svg-inline--fa fa-mobile-alt fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm112-108c0 6.6-5.4 12-12 12H60c-6.6 0-12-5.4-12-12V60c0-6.6 5.4-12 12-12h200c6.6 0 12 5.4 12 12v312z"></path></svg>
+						<div class="need-text">
+							<p class="need-txt">Need Help?<br><span class="first-num">1800</span> <span class="last-num">000 000</span></p>
+						</div>
+					</a>
+
+					<h1 class="logo-text"><a href="#" class="logo">Flowers Shop</a></h1>
+
+					<div class="header-center-search search visible-box">
+						<div class="search-icon-wrap">
+							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="search-icon svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+						</div>
+						<input type="text" class="search-input" placeholder="Search">
+					</div>
+				</div>
+			</div>
+
+			<div class="header-menu">
+				<div class="header-menu-line"></div>
+
+				<div class="container">
+					<div class="header-menu-body">
+						<ul class="menu">
+							<li class="menu-text"><a href="#" class="menu-link">Home</a></li>
+							<li class="menu-text"><a href="#" class="menu-link">Christmas</a></li>
+							<li class="menu-text"><a href="#" class="menu-link">Season`s Best</a></li>
+							<li class="menu-text"><a href="#" class="menu-link">Wedding</a></li>
+							<li class="menu-text"><a href="#" class="menu-link">By Occasions</a></li>
+							<li class="menu-text"><a href="#" class="menu-link">By Types</a></li>
+							<li class="menu-text"><a href="#" class="menu-link">By Prices</a></li>
+							<li class="menu-text"><a href="#" class="menu-link">By Flowers</a></li>
+							<li class="menu-text"><a href="#" class="menu-link">Plants</a></li>
+							<li class="menu-text"><a href="#" class="menu-link">Terrariums</a></li>
+						</ul>
+
+						<div class="burger">
+							<input type="checkbox" id="burg-check">
+							<div class="black-bg"></div>
+							<label for="burg-check" class="burg-btn">
+								<span class="burg-line-1 burg-line"></span>
+								<span class="burg-line-2 burg-line"></span>
+								<span class="burg-line-3 burg-line"></span>
+							</label>
+
+							<ul class="burg-menu">
+								<li class="menu-search">
+									<div class="header-center-search search hidden-box">
+										<div class="search-icon-wrap">
+											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="search-icon svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+										</div>
+										<input type="text" class="search-input" placeholder="Search">
+									</div>
+								</li>
+								<li class="burg-text"><a href="#" class="burg-link">Home</a></li>
+								<li class="burg-text"><a href="#" class="burg-link">Christmas</a></li>
+								<li class="burg-text"><a href="#" class="burg-link">Season`s Best</a></li>
+								<li class="burg-text"><a href="#" class="burg-link">Wedding</a></li>
+								<li class="burg-text"><a href="#" class="burg-link">By Occasions</a></li>
+								<li class="burg-text"><a href="#" class="burg-link">By Types</a></li>
+								<li class="burg-text"><a href="#" class="burg-link">By Prices</a></li>
+								<li class="burg-text"><a href="#" class="burg-link">By Flowers</a></li>
+								<li class="burg-text"><a href="#" class="burg-link">Plants</a></li>
+								<li class="burg-text"><a href="#" class="burg-link">Terrariums</a></li>
+							</ul>
+						</div>
+
+						<a href="#" class="cart-basket">
+							<svg class="cart-basket-icon" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15.55 13c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.37-.66-.11-1.48-.87-1.48H5.21l-.94-2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7l1.1-2h7.45zM6.16 6h12.15l-2.76 5H8.53L6.16 6zM7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+							<p class="cart-basket-text">Cart (<span class="cart-num">0</span>)</p>
+						</a>
+					</div>
+				</div>
+
+				<div class="header-menu-line"></div>
+			</div>
+
+			<div class="header-bottom">
+				<div class="container">
+					<div class="header-bottom-body">
+						<div class="lock header-bottom-section">
+							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="lock" class="lock-icon header-bottom-icon svg-inline--fa fa-lock fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path></svg>
+							<p class="lock-text header-bottom-text">100% Secure & PCI Compliance</p>
+						</div>
+
+						<div class="car header-bottom-section">
+							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shuttle-van" class="car-icon header-bottom-icon svg-inline--fa fa-shuttle-van fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M628.88 210.65L494.39 49.27A48.01 48.01 0 0 0 457.52 32H32C14.33 32 0 46.33 0 64v288c0 17.67 14.33 32 32 32h32c0 53.02 42.98 96 96 96s96-42.98 96-96h128c0 53.02 42.98 96 96 96s96-42.98 96-96h32c17.67 0 32-14.33 32-32V241.38c0-11.23-3.94-22.1-11.12-30.73zM64 192V96h96v96H64zm96 240c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm160-240h-96V96h96v96zm160 240c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm-96-240V96h66.02l80 96H384z"></path></svg>
+							<p class="car-text header-bottom-text">Order by 2PM for Same day delivery</p>
+						</div>
+
+						<div class="like header-bottom-section">
+							<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="thumbs-up" class="like-icon header-bottom-icon svg-inline--fa fa-thumbs-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M104 224H24c-13.255 0-24 10.745-24 24v240c0 13.255 10.745 24 24 24h80c13.255 0 24-10.745 24-24V248c0-13.255-10.745-24-24-24zM64 472c-13.255 0-24-10.745-24-24s10.745-24 24-24 24 10.745 24 24-10.745 24-24 24zM384 81.452c0 42.416-25.97 66.208-33.277 94.548h101.723c33.397 0 59.397 27.746 59.553 58.098.084 17.938-7.546 37.249-19.439 49.197l-.11.11c9.836 23.337 8.237 56.037-9.308 79.469 8.681 25.895-.069 57.704-16.382 74.757 4.298 17.598 2.244 32.575-6.148 44.632C440.202 511.587 389.616 512 346.839 512l-2.845-.001c-48.287-.017-87.806-17.598-119.56-31.725-15.957-7.099-36.821-15.887-52.651-16.178-6.54-.12-11.783-5.457-11.783-11.998v-213.77c0-3.2 1.282-6.271 3.558-8.521 39.614-39.144 56.648-80.587 89.117-113.111 14.804-14.832 20.188-37.236 25.393-58.902C282.515 39.293 291.817 0 312 0c24 0 72 8 72 81.452z"></path></svg>
+							<p class="like-text header-bottom-text">100% Satisfaction Guaranteed</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="page">
+
+			<div class="order">
+				<div class="container">
+					<div class="order-body">
+
+						<div class="order-left">
+
+							<div class="left-section-wrap">
+								<div class="order-left-section">
+									<div class="order-left-body">
+										<a href="#" class="order-left-rubric">ORDER</a>
+										<div class="decor-block">
+											<a href="#" class="left-section-heading">FLOWERS</a>
+											<div class="decor">
+												<div class="decor-line"><span class="decor-img"></span></div>
+												<div class="decor-line"><span class="decor-img"></span></div>
+											</div>
+										</div>
+										<p class="section-left-text">Shop Our Collection</p>
+										<a href="#" class="section-left-btn circle-btn">
+											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="circle-btn-icon svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="left-section-wrap">
+								<div class="order-left-section">
+									<div class="order-left-body">
+										<a href="#" class="order-left-rubric">CORPORATE</a>
+										<div class="decor-block">
+											<a href="#" class="left-section-heading">FLOWERS</a>
+											<div class="decor">
+												<div class="decor-line"><span class="decor-img"></span></div>
+												<div class="decor-line"><span class="decor-img"></span></div>
+											</div>
+										</div>
+										<p class="section-left-text">See Our Work</p>
+										<a href="#" class="section-left-btn circle-btn">
+											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="circle-btn-icon svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="left-section-wrap">
+								<div class="order-left-section">
+									<div class="order-left-body">
+										<a href="#" class="order-left-rubric">HANDCRAFTED</a>
+										<div class="decor-block">
+											<a href="#" class="left-section-heading">WEDDING</a>
+											<div class="decor">
+												<div class="decor-line"><span class="decor-img"></span></div>
+												<div class="decor-line"><span class="decor-img"></span></div>
+											</div>
+										</div>
+										<p class="section-left-text">View Our Portfolio</p>
+										<a href="#" class="section-left-btn circle-btn">
+											<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="circle-btn-icon svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+										</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="order-right">
+							<div class="order-right-body">
+								<p class="order-right-heading"><span class="right-heading-black">Order</span> Flowers</p>
+								<p class="order-right-text">100% Moneyback Guarantee</p>
+								<a href="#" class="order-right-btn">
+									<span class="right-btn-text">Shop Now</span>
+									<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" class="right-btn-icon svg-inline--fa fa-chevron-right fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="products">
+				<div class="container">
+					<div class="section-products">
+						<a href="#" class="products-heading">Featured Products</a>
+
+						<div class="products-carts">
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="section-products">
+						<a href="#" class="products-heading">Featured Products</a>
+
+						<div class="products-carts">
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="section-products">
+						<a href="#" class="products-heading">Featured Products</a>
+
+						<div class="products-carts">
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="products-cart-wrap">
+								<div class="products-cart">
+									<div class="products-cart-body">
+										<a href="#" class="products-cart-heading">Item Name</a>
+										<a href="#" class="cart-img-wrap">
+											<img src="img/products.png" alt="products" class="products-cart-img">
+										</a>
+										<div class="products-cart-bottom">
+											<p class="cart-bottom-price">$ 28.50</p>
+											<a href="#" class="cart-bottom-btn">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div> <!-- Page -->
+
+		<footer class="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="footer-top-body">
+
+						<div class="footer-section-wrap">
+							<div class="footer-section">
+								<p class="footer-section-heading">Links</p>
+
+								<ul class="footer-menu">
+									<li class="section-menu-text"><a class="section-menu-link" href="#">About Us</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">Contact Us</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">Delivery Policy</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">100% Statisfaction Guaranteed</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">Privacy Policy</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">Security Policy</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">Terms and Conditions</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">Testimonials</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">FAQ</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="footer-section-wrap">
+							<div class="footer-section">
+								<p class="footer-section-heading">Useful Information</p>
+
+								<ul class="footer-menu">
+									<li class="section-menu-text"><a class="section-menu-link" href="#">Caring for flowers</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">caring for plants</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">Flower Meaning</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">How to choose flowers</a></li>
+									<li class="section-menu-text"><a class="section-menu-link" href="#">Message Ideas</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="footer-section-wrap">
+							<div class="footer-section">
+								<p class="footer-section-heading">Stay Connected</p>
+
+								<ul class="footer-menu">
+									<li class="section-menu-text">Join our email list for exclusive news and deals</li>
+
+									<li class="footer-menu-form first-form">
+										<input type="text" class="menu-form-input" placeholder="Enter your name" required>
+									</li>
+
+									<li class="footer-menu-form">
+										<input type="email" class="menu-form-input" placeholder="Enter your email address" required>
+									</li>
+
+									<li class="footer-menu-form">
+										<button class="menu-form-btn" type="submit">Join Now</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="footer-section-wrap">
+							<div class="footer-section">
+								<p class="footer-section-heading">Testimonials</p>
+
+								<ul class="footer-menu">
+									<li class="section-menu-text quots">Lorem Ipsum is simply dummy text the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</li>
+									<li class="section-menu-text quots">Lorem Ipsum is simply dummy text the printing and typesetting industry. Lorem Ipsum has been the industry</li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<div class="container">
+					<div class="footer-bottom-body">
+						<div class="footer-bottom-img">
+							<img src="img/buy-1.jpg" alt="buy-system-1" class="footer-img">
+							<img src="img/buy-2.jpg" alt="buy-system-2" class="footer-img">
+						</div>
+
+						<div class="footer-copy">
+							<p class="copy">© 2020 flowershop.com</p>
+						</div>
+
+						<div class="footer-bottom-social">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="bottom-social-icon svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="bottom-social-icon svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="bottom-social-icon svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
