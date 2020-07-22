@@ -33,7 +33,6 @@ body.lock {
 }
 
 input, button, textarea {
-	box-sizing: border-box;
 	font-family: inherit;
 	font-size: inherit;
 }
@@ -414,7 +413,6 @@ h1, h2, h3, h4, h5, h6 {
 	align-items: center;
 	border-radius: 18px;
 	border: 1px solid #ababab;
-	max-width: 200px;
 	background: #fff;
 }
 
@@ -455,7 +453,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hidden-box {
-	max-width: 70%;
+	padding: 0 20px;
 	width: 100%;
 	display: none;
 }
