@@ -26,7 +26,6 @@ html, body {
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
-	color: #212121;
 }
 
 body.lock {
@@ -452,6 +451,12 @@ h1, h2, h3, h4, h5, h6 {
 .search-input::placeholder {
 	color: #ababab;
 	opacity: 1;
+}
+
+.hidden-box {
+	max-width: 70%;
+	width: 100%;
+	display: none;
 }
 
 /* Header-Menu */
